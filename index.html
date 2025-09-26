@@ -3,59 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Nueva Página</title>
+  <title>Beatriz Mouriño Carballido</title>
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      background: #fafafa;
-      color: #222;
+      background: #fff;
+      color: #111;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
     }
-    header, footer {
-      background: #222;
-      color: #fff;
-      padding: 1em 2em;
-      text-align: center;
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
     }
     nav {
-      margin: 1em 0;
+      width: 220px;
+      min-width: 180px;
+      padding: 60px 30px 30px 30px;
+      box-sizing: border-box;
+      border-right: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: #fff;
+    }
+    .nav-title {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 2em;
+      color: #111;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    nav li {
+      margin: 0 0 1.2em 0;
+      width: 100%;
     }
     nav a {
-      color: #222;
+      color: #1967d2;
       text-decoration: none;
-      margin: 0 1em;
-      font-weight: bold;
+      font-size: 1.09em;
+      font-weight: 500;
+      transition: text-decoration 0.15s;
+      padding: 0.2em 0.1em;
+      border-radius: 2px;
+      display: block;
     }
-    main {
-      padding: 2em;
+    nav a.active, nav a:focus, nav a:hover {
+      text-decoration: underline;
+      background: #eaf2ff;
+    }
+    .nav-footer {
+      font-size: 0.95em;
+      color: #222;
+      margin-top: auto;
+      margin-bottom: 1em;
+      opacity: 0.85;
+    }
+    .main-content {
+      margin-left: 220px;
+      padding: 80px 40px 40px 40px;
       max-width: 700px;
-      margin: auto;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      width: 100%;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    h1, h2 {
+      color: #111;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      letter-spacing: -1px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.3em;
+    }
+    section {
+      margin-bottom: 2.5em;
+      line-height: 1.7;
+    }
+    a {
+      color: #1967d2;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
+    @media (max-width: 700px) {
+      nav {
+        position: static;
+        width: 100vw;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        flex-direction: row;
+        align-items: center;
+        padding: 18px 10px 10px 10px;
+      }
+      .nav-title {
+        font-size: 1.1em;
+        margin-bottom: 0;
+        margin-right: 1em;
+      }
+      nav ul {
+        display: flex;
+        gap: 1.1em;
+        margin-bottom: 0;
+      }
+      nav li {
+        margin: 0;
+      }
+      .nav-footer {
+        display: none;
+      }
+      .main-content {
+        margin-left: 0;
+        padding: 30px 7vw 18px 7vw;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Mi Nueva Página Web</h1>
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Sobre mí</a>
-      <a href="#">Contacto</a>
-    </nav>
-  </header>
-
-  <main>
-    <h2>Bienvenido</h2>
-    <p>Esta es una página web de ejemplo creada desde cero. Puedes editar este texto para poner la información que quieras.</p>
-    <h3>Sección de ejemplo</h3>
-    <p>Agrega aquí más secciones, enlaces, textos, listas, formularios, etc.</p>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
-  </footer>
+  <nav>
+    <div class="nav-title">Beatriz Mouriño Carballido</div>
+    <ul>
+      <li><a href="#" class="active">Inicio</a></li>
+      <li><a href="#">CV</a></li>
+      <li><a href="#">Publicaciones</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <div class="nav-footer">
+      <div>beatriz.mourino@ejemplo.com</div>
+      <div>Universidad de Vigo</div>
+    </div>
+  </nav>
+  <div class="main-content">
+    <section>
+      <h1>Bienvenida</h1>
+      <p>
+        ¡Hola! Soy Beatriz Mouriño Carballido, investigadora en oceanografía biológica.<br>
+        Este es mi sitio web personal, donde comparto información sobre mi trayectoria profesional, proyectos e intereses científicos.
+      </p>
+    </section>
+    <section>
+      <h2>Sobre mí</h2>
+      <p>
+        Doctora en Biología por la Universidad de Vigo. Especializada en procesos biogeoquímicos y dinámica del fitoplancton en zonas costeras y oceánicas.<br>
+        <br>
+        Si quieres saber más sobre mis publicaciones o descargar mi currículum, utiliza el menú de la izquierda.
+      </p>
+    </section>
+    <section>
+      <h2>Contacto</h2>
+      <p>
+        Puedes escribirme a <a href="mailto:beatriz.mourino@ejemplo.com">beatriz.mourino@ejemplo.com</a><br>
+        O visitar la <a href="https://www.uvigo.es/">Universidad de Vigo</a>.
+      </p>
+    </section>
+  </div>
 </body>
 </html>
