@@ -1,96 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beatriz Mouriño Carballido</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #111;
-      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-    }
-    body {
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .center-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-width: 270px;
-      width: 100vw;
-      max-width: 95vw;
-    }
-    .big-name {
-      font-size: 2.7em;
-      font-weight: 700;
-      letter-spacing: -1px;
-      margin-bottom: 1.3em;
-      text-align: center;
-      line-height: 1.1;
-      color: #111;
-      word-break: break-word;
-    }
-    nav {
-      display: flex;
-      flex-direction: row;
-      gap: 2.2em;
-      margin-bottom: 0.8em;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav a {
-      color: #1967d2;
-      text-decoration: none;
-      font-size: 1.12em;
-      font-weight: 500;
-      padding: 0.1em 0.2em;
-      border-radius: 2px;
-      transition: background 0.18s, text-decoration 0.18s;
-    }
-    nav a:hover, nav a.active, nav a:focus {
-      text-decoration: underline;
-      background: #eaf2ff;
-    }
-    .subtitle {
-      font-size: 1.08em;
-      color: #222;
-      margin-top: 2.5em;
-      opacity: 0.87;
-      text-align: center;
-      font-weight: 400;
-      max-width: 480px;
-    }
-    @media (max-width: 600px) {
-      .big-name { font-size: 2em; }
-      nav { gap: 1.2em; }
-      .center-box { max-width: 99vw; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada Minimalista</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        .tabs {
+            margin-top: 20px;
+        }
+        .tab {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
 </head>
 <body>
-  <div class="center-box">
-    <div class="big-name">Beatriz Mouriño Carballido</div>
-    <nav>
-      <a href="#" class="active">Inicio</a>
-      <a href="#">CV</a>
-      <a href="#">Publicaciones</a>
-      <a href="#">Contacto</a>
-    </nav>
-    <div class="subtitle">
-      Investigadora en Oceanografía Biológica.<br>
-      Universidad de Vigo.
+    <div class="container">
+        <h1>Nombre Grande</h1>
+        <div class="tabs">
+            <div class="tab">Pestaña 1</div>
+            <div class="tab">Pestaña 2</div>
+            <div class="tab">Pestaña 3</div>
+        </div>
     </div>
-  </div>
 </body>
 </html>
