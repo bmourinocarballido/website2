@@ -1,0 +1,45 @@
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 270px;
+  width: 100vw;
+  max-width: 95vw;
+  color: #111;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+nav a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 0.14em 0.34em;
+  border-radius: 3px;
+  transition: background 0.18s, text-decoration 0.18s, color 0.18s;
+}
+nav a.active, nav a:hover, nav a:focus {
+  text-decoration: underline;
+  background: #eaf2ff;
+  color: #111;
+}
+h1 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 0.6em;
+  margin-bottom: 0.8em;
+}
+@media (max-width: 700px) {
+  nav a { font-size: 1em;}
+  nav { gap: 1em; }
+  .center-box { max-width: 99vw; }
+  h1 { font-size: 1.4em; }
+}
