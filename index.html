@@ -42,7 +42,7 @@
       background: #f8f8f8;
     }
     .big-name {
-      font-size: 2.7em;
+      font-size: 3em; /* aumentado */
       font-weight: 700;
       letter-spacing: -1px;
       margin-bottom: 0.6em;
@@ -52,13 +52,13 @@
       word-break: break-word;
     }
     .subtitle {
-      font-size: 1.08em;
+      font-size: 1.22em; /* aumentado */
       color: #111;
       margin-top: 0.2em;
       opacity: 1;
       text-align: center;
       font-weight: 400;
-      max-width: 480px;
+      max-width: 700px;
       margin-bottom: 1.1em;
     }
     nav {
@@ -96,6 +96,16 @@
       color: #111;
       font-weight: 600;
       letter-spacing: 0.01em;
+    }
+    /* Nueva clase para detalles justificados y pequeños */
+    .contact-details {
+      font-size: 0.78em;
+      color: #111;
+      text-align: justify;
+      margin: 0.8em auto 0 auto;
+      max-width: 440px;
+      opacity: 1;
+      line-height: 1.5;
     }
     .profile-links {
       display: flex;
@@ -136,6 +146,7 @@
       .profile-links { gap: 0.7em; font-size: 0.97em;}
       .contact-info { font-size: 0.78em; }
       nav a { font-size: 1em; }
+      .contact-details { font-size: 0.72em; }
     }
   </style>
 </head>
@@ -144,7 +155,7 @@
     <img src="img_5441_med.jpeg" alt="Beatriz Mouriño Carballido" class="profile-photo">
     <div class="big-name">Beatriz Mouriño Carballido</div>
     <div class="subtitle">
-      Biological Oceanographic Group (GOB, University of Vigo)
+      Investigadora en Oceanografía Biológica. Universidad de Vigo. Biological Oceanographic Group (GOB, University of Vigo)
     </div>
     <nav>
       <a href="index.html" class="active">Home</a>
@@ -152,11 +163,14 @@
       <a href="outreach.html">Outreach</a>
       <a href="teaching.html">Teaching and Mentoring</a>
     </nav>
-    <div class="contact-info"> 
-      <div><strong>E-mail:</strong> <a href="mailto:bmourino@uvigo.es">bmourino@uvigo.es</a></div>
-      <div><strong>Research Lab at:</strong><br>Edificio Torre CACTI, Planta 1ª, Laboratorio Oceanografía Biolóxica. Campus de Vigo. Universidade de Vigo, 36310 Vigo, Spain</div>
-      <div><strong>Phone:</strong> +34-986-818788</div>
-      <div><strong>Despacho virtual:</strong> Sala 1718</div>
+    <div class="contact-info">
+      <div><strong>Departamento:</strong> Ecoloxía e Bioloxía Animal</div>
+      <div class="contact-details">
+        <strong>E-mail:</strong> <a href="mailto:bmourino@uvigo.es">bmourino@uvigo.es</a><br>
+        <strong>Research Lab at:</strong> Edificio Torre CACTI, Planta 1ª, Laboratorio Oceanografía Biolóxica. Campus de Vigo. Universidade de Vigo, 36310 Vigo, Spain<br>
+        <strong>Phone:</strong> +34-986-818788<br>
+        <strong>Despacho virtual:</strong> Sala 1718
+      </div>
     </div>
     <div class="profile-links">
       <a href="https://orcid.org/0000-0001-7961-1477" target="_blank" rel="noopener">
