@@ -11,9 +11,10 @@
       padding: 0;
       background: #fff;
       color: #111;
-      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-      font-size: 17px;
+      font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
+      font-size: 18px;
       font-weight: 400;
+      letter-spacing: 0.01em;
     }
     body {
       min-height: 100vh;
@@ -21,162 +22,135 @@
       align-items: center;
       justify-content: center;
     }
-    .center-box {
+    .main-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      width: 100%;
-      max-width: 520px;
-      padding: 2em 1em;
+      justify-content: center;
+      width: 100vw;
+      min-height: 100vh;
       box-sizing: border-box;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 32px #0002;
-    }
-    .big-name {
-      font-size: 2.7em;
-      font-weight: 700;
-      letter-spacing: -1px;
-      margin-bottom: 0.4em;
-      text-align: center;
-      color: #111;
-      line-height: 1.08;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .subtitle {
-      font-size: 1.12em;
-      color: #111;
-      text-align: center;
-      margin-bottom: 0.7em;
-      font-weight: 400;
-      opacity: 0.93;
+      padding: 32px 16px;
     }
     .profile-photo {
-      width: 110px;
-      height: 110px;
+      width: 108px;
+      height: 108px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 1.3em;
-      border: 2.5px solid #111;
-      box-shadow: 0 2px 20px #0001;
-      background: #f8f8f8;
+      margin-bottom: 2rem;
+      border: 2px solid #111;
+    }
+    .name {
+      font-size: 2.8em;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: #111;
+      white-space: nowrap;
+    }
+    .subtitle {
+      font-size: 1.18em;
+      color: #111;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 2.2rem;
+      letter-spacing: 0.01em;
     }
     nav {
       display: flex;
-      gap: 1.2em;
-      margin-bottom: 1.6em;
+      gap: 2.3em;
+      margin-bottom: 3.2rem;
       justify-content: center;
-      flex-wrap: wrap;
     }
     nav a {
       color: #111;
       text-decoration: none;
-      font-size: 1.13em;
+      font-size: 1.12em;
       font-weight: 500;
-      padding: 0.18em 0.6em;
-      border-radius: 6px;
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
       transition: background 0.18s, text-decoration 0.18s;
-      background: #f6f6f7;
-      margin-bottom: 0.15em;
     }
     nav a.active, nav a:hover, nav a:focus {
-      background: #eaeaea;
       text-decoration: underline;
+      background: #ececec;
       color: #111;
     }
-    .contact-info {
-      margin-top: 1.1em;
-      font-size: 0.98em;
+    .contact {
+      font-size: 1em;
       color: #111;
-      opacity: 0.95;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 1.5em;
       line-height: 1.7;
-      text-align: left;
-      max-width: 420px;
-      margin-bottom: 1.15em;
     }
-    .contact-info strong {
-      color: #111;
+    .contact strong {
       font-weight: 600;
       letter-spacing: 0.01em;
     }
-    .contact-details {
-      font-size: 0.92em;
-      color: #111;
-      text-align: left;
-      margin: 0.6em 0 0 0.1em;
-      opacity: 0.95;
-      line-height: 1.5;
-    }
-    .profile-links {
+    .links {
       display: flex;
-      gap: 1.1em;
-      margin-top: 1.4em;
+      flex-direction: row;
+      gap: 1.2em;
+      margin-top: 1.5em;
       justify-content: center;
       flex-wrap: wrap;
     }
-    .profile-links a {
+    .links a {
       color: #111;
       text-decoration: none;
-      font-size: 1.05em;
+      font-size: 1em;
       transition: text-decoration 0.15s;
       display: flex;
       align-items: center;
-      gap: 0.33em;
-      background: #f6f6f7;
-      border-radius: 4px;
-      padding: 0.12em 0.45em;
+      gap: 0.35em;
     }
-    .profile-links a:hover,
-    .profile-links a:focus {
+    .links a:hover, .links a:focus {
       text-decoration: underline;
-      background: #eaeaea;
       color: #111;
     }
-    .profile-links img {
+    .links img {
       width: 20px;
       height: 20px;
       border-radius: 4px;
+      vertical-align: middle;
       object-fit: contain;
       margin-right: 2px;
+      background: none;
     }
     @media (max-width: 600px) {
-      .center-box { max-width: 99vw; padding: 1em 0.3em;}
-      .big-name { font-size: 2em; }
-      .subtitle { font-size: 0.97em; }
-      nav { gap: 0.7em; }
-      nav a { font-size: 1em; padding: 0.13em 0.3em;}
-      .profile-photo { width: 80px; height: 80px;}
-      .profile-links { gap: 0.5em; font-size: 0.97em;}
-      .contact-info { font-size: 0.91em; }
-      .contact-details { font-size: 0.82em; }
+      .main-container {padding: 12px 2px;}
+      .profile-photo {width: 72px; height: 72px;}
+      .name {font-size: 1.6em;}
+      .subtitle {font-size: 1em;}
+      nav {gap: 1em;}
     }
   </style>
 </head>
 <body>
-  <div class="center-box">
-    <div class="big-name">Beatriz Mouriño Carballido</div>
+  <div class="main-container">
+    <img src="img_5441_med.jpeg" alt="Beatriz Mouriño Carballido" class="profile-photo">
+    <div class="name">Beatriz Mouriño Carballido</div>
     <div class="subtitle">
+      Investigadora en Oceanografía Biológica. Universidad de Vigo.<br>
       Biological Oceanographic Group (GOB, University of Vigo)
     </div>
-    <img src="img_5441_med.jpeg" alt="Beatriz Mouriño Carballido" class="profile-photo">
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="funding.html">Funding and publications</a>
       <a href="outreach.html">Outreach</a>
       <a href="teaching.html">Teaching and Mentoring</a>
     </nav>
-    <div class="contact-info">
-      <div class="contact-details">
-        <strong>E-mail:</strong> <a href="mailto:bmourino@uvigo.es">bmourino@uvigo.es</a><br>
-        <strong>Research Lab at:</strong> Edificio Torre CACTI, Planta 1ª, Laboratorio Oceanografía Biolóxica. Campus de Vigo. Universidade de Vigo, 36310 Vigo, Spain<br>
-        <strong>Phone:</strong> +34-986-818788<br>
-        <strong>Despacho virtual:</strong> Sala 1718
-      </div>
+    <div class="contact">
+      <strong>Departamento:</strong> Ecoloxía e Bioloxía Animal<br>
+      <strong>E-mail:</strong> <a href="mailto:bmourino@uvigo.es">bmourino@uvigo.es</a><br>
+      <strong>Research Lab at:</strong> Edificio Torre CACTI, Planta 1ª, Laboratorio Oceanografía Biolóxica. Campus de Vigo. Universidade de Vigo, 36310 Vigo, Spain<br>
+      <strong>Phone:</strong> +34-986-818788<br>
+      <strong>Despacho virtual:</strong> Sala 1718
     </div>
-    <div class="profile-links">
+    <div class="links">
       <a href="https://orcid.org/0000-0001-7961-1477" target="_blank" rel="noopener">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID" title="ORCID"> ORCID
       </a>
