@@ -75,6 +75,15 @@
       flex-direction: column;
       align-items: center;
     }
+    .top-image {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      margin-bottom: 2em;
+      box-shadow: 0 2px 8px rgba(0,0,0,.04);
+      object-fit: cover;
+      display: block;
+    }
     .section-title {
       font-size: 2em;
       font-weight: 700;
@@ -113,6 +122,7 @@
     }
     @media (max-width: 700px) {
       .center-column {max-width: 98vw;}
+      .top-image {max-width: 98vw;}
       .section-title {font-size: 1.3em;}
       ul {font-size: 0.8em;}
       .last-updated {font-size: 0.7em;}
@@ -132,35 +142,72 @@
     <div class="header-content">
       <nav>
         <a href="index.html">Home</a>
-        <a href="funding.html" class="active">Funding & Publications</a>
+        <a href="funding.html">Funding & Publications</a>
         <a href="outreach.html">Outreach</a>
-        <a href="teaching.html">Teaching & Mentoring</a>
+        <a href="teaching.html" class="active">Teaching & Mentoring</a>
       </nav>
     </div>
   </header>
   <main>
     <div class="center-column">
-      <div class="section-title">Websites</div>
+      <!-- Imagen superior -->
+      <img src="teaching_foto1.png" alt="Teaching & Mentoring" class="top-image">
+
+      <div class="section-title">Teaching</div>
+      <div class="subtitle">Asignaturas impartidas</div>
       <ul>
-        <li><strong>REMEDIOS Project</strong></li>
-        
+        <li>Ecología (Grado en Biología, UVIGO)</li>
+        <li>Oceanografía Biológica II (Grado en Ciencias del Mar, UVIGO)</li>
+        <li>Oceanografía de Ecosistemas (Master en Oceanografía, Facultad de Ciencias-Vigo, UVIGO)</li>
       </ul>
 
-      <div class="section-title">Radio</div>
+      <div class="section-title">Mentoring</div>
+      <div class="subtitle">PhD thesis</div>
       <ul>
-        <li>Bieito Fernández interview at Radio Galega</li>
-        <li>Bieito Fernández interview at Españoles por el mar</li>
-        <li><a href="https://www.npr.org/2022/04/09/1092000745/wait-wait-dont-tell-me-april-9-2022">npr 'Wait Wait' for April 9, 2022: With Not My Job guest Matt Walsh (minute 9:30)</a></li>
+        <li>Biological nitrogen fixation in the Rias Baixas (NO Iberia): activity, responsible organisms and control factors. (on going). Daniel Fernández. Coadviser: Marta Varela (IEO-CSIC).</li>
+        <li>The role of turbulence in the phytoplankton growth in the Ría de Vigo (NW of the Iberian Peninsula) (2024). Antonio Comesaña Davila. Coadviser: Bieito Fernández (University of Southampton).</li>
+        <li>Thin layers of phytoplankton in the Rías Baixas (NW off Iberia): occurrence, formation and relevance (2024). Esperanza Broullón Mandado. Coadviser: Bieito Fernández (University of Southampton).</li>
+        <li>Control of the structure of marine picoplankton communities by turbulence and nutrient supply dynamics (2020). José Luis Otero Ferrer. Coadviser: Pedro Cermeño (CSIC-Barcelona).</li>
+        <li>Role of turbulence and mixing in the control of the phytoplankton community structure (2020). Marina Villamaña Rodríguez. Coadviser: Emilio Marañón (UVIGO).</li>
+        <li>Biological N2 fixation in the upwelling region off NW Iberian Peninsula: magnitude, relevance and players (2018). Víctor Moreira Coello. Coadviser: Emilio Marañón (UVIGO).</li>
+        <li>Regional variability in nutrient supply and the synthesis and remineralization of organic matter in the oligotrophic ocean (2015). Bieito Fernández Castro. Coadviser: Emilio Marañón (UVIGO).</li>
       </ul>
 
-      <div class="section-title">TV</div>
+      <div class="subtitle">Master thesis (TFM)</div>
       <ul>
-        <li>“O efecto do quecemento dos océanos na fotosíntese varía segundo os nutrientes das augas”. Televisión de Galicia. 02/05/18</li>
+        <li>Diferencias en la distribución vertical de clorofila entre las Rías de Pontevedra y Vigo (2024). Blanca Marigomez Roldán. Máster en Oceanografía (Universidade de Vigo). Coadviser: Esperanza Broullón Mandado (UVIGO, Vigo).</li>
+        <li>Relación entre condiciones ambientales y presencia de capas finas de fitoplancton en las Rías Baixas (2019). Marta López Mozos. Máster en Oceanografía (Universidade de Vigo). Coadviser: Miguel Gil Coto (CSIC, Vigo).</li>
+        <li>Fixación biológxca de nitróxeno na Ría de Vigo: variabilidad estacional e impacto das entradas antropoxénicas de materia (2019). Diego Ferraz Castiñeira. Máster en Oceanografía (Universidade de Vigo). Coadviser: Ana Fernández (UVIGO).</li>
+        <li>Relación entre capas finas y densidad de fitoplancton tóxico en las Rías de Pontevedra y Vigo (2018). Esperanza Broullón Mandado. Máster en Gestión Integrada de Sistemas Hídricos (Universidade de Cantabria). Coadviser: Araceli Puente (UC).</li>
+        <li>Factores que controlan la distribución del picoplancton en aguas costeras del NO de la Península Ibérica (2017). Rodrigo López Soriano. Máster en Oceanografía (Universidade de Vigo). Coadviser: Emilio Fernández (UVIGO).</li>
+        <li>Detección de capas finas de fitoplancton en la Ría de Pontevedra durante el periodo 2012-2015 (2016). Víctor Pelayo Espinosa. Máster en Oceanografía (Universidade de Vigo). Coadviser: Miguel Gil Coto (CSIC, Vigo).</li>
+        <li>Role of internal waves on mixing, nutrient supply and phytoplankton composition during spring and neap tides in the Ria de Vigo (NW Iberian Peninsula) (2015). Marina Villamaña Rodríguez. Máster en Oceanografía (Universidade de Vigo). Coadviser: Jose da Silva (University of Porto, Portugal).</li>
+        <li>El control de la turbulencia sobre la composición y estructura de tamaños de la comunidad de picoplancton (2012). Elena Hojas Sánchez. Máster en Oceanografía (UVIGO). Coadviser: Xelu Morán (IEO-Xixón).</li>
+        <li>Variabilidade espacial na síntese e remineralización de materia orgánica no xiro subtropical do Atlántico Norte (2011). Bieito Fernández Castro. Máster en Oceanografía (UVIGO). Coadviser: Emilio Marañón (UVIGO).</li>
+        <li>Basins-cale variability of vertical flux of nitrate derived from measurements of turbulence kinetic energy in the Atlantic ocean (2008). Rocío Fernández Graña. Máster Interuniversitario en Física Aplicada (Universidades de A Coruña y Vigo).</li>
       </ul>
 
-      <div class="section-title">Newspaper</div>
+      <div class="subtitle">Undergraduate projects (TFG)</div>
       <ul>
-        
+        <li>Diferencias en la distribución vertical de clorofila-a entre las Rías de Pontevedra y Vigo (2023). Yaiza González Freitas. Grado en CC del Mar-UVIGO. Coadviser: Esperanza Broullón Mandado (UVIGO).</li>
+        <li>Magnitud y composición de la comunidad fitoplanctónica en el gradiente costa-océano del suroeste de la Península Ibérica en Septiembre de 2022 (2023). Sofía Nieto Romero. Grado en CC del Mar-UVIGO. Coadviser: Marcos Fontela (UVIGO).</li>
+        <li>Características del máximo de fluorescencia en las Rías de Pontevedra y Vigo en verano del 2018 (2019). Sandra Villar Herbello. Grado en CC del Mar-UVIGO. Coadviser: Miguel Gil Coto (IIM-CSIC).</li>
+        <li>Mecanismos de formación de una capa fina de fitoplancton en la Ría de Pontevedra en verano de 2018 (2019). Enrique Crespo Fernández. Grado en CC Ambientales-UVIGO. Coadviser: Emilio Fernández (UVIGO).</li>
+        <li>Fijación biológica de nitrógeno en la Ría de Vigo: variabilidad estacional e impacto de las entradas antropogénicas de materia (2018). Diego Ferraz Castiñeiras. Grado en CC Ambientales-UVIGO. Coadviser: Ana Fernández (UVIGO).</li>
+        <li>Relación entre condiciones ambientales y presencia de capas finas de fitoplancton en las Rías Baixas (2018). Marta López Rozados. Grado en CC del Mar-UVIGO. Coadviser: Miguel Gil Coto (IIM-CSIC).</li>
+        <li>Relación entre capas finas y fitoplancton tóxico en la Ría de Pontevedra (2017). Esperanza Broullón Mandado. Grado en CC del Mar-UVIGO.</li>
+        <li>Estimación del transporte difusivo de nitrato hacia la capa fótica en regiones oceánicas contrastadas (2016). Mariña Blázqez Maseda. Grado en CC del Mar-UVIGO. Coadviser: Bieito Fernández (UVIGO).</li>
+        <li>La influencia de los sustratos artificiales en las comunidades bentónicas de sustrato duro de la Ría de Vigo (2016). Sandra Verde Palmero. Grado en CC Ambientales-UVIGO. Coadviser: Emilio Fernández (UVIGO).</li>
+        <li>Factores que controlan la distribución del picoplancton en aguas costeras del NO de la Península Ibérica (2016). Rodrigo López Soriano. Grado en CC do Mar-UVIGO. Coadviser: Emilio Fernández (UVIGO).</li>
+        <li>Relación entre a diversidade do bacterioplancton e a entrada de nutrintes na columna de auga, nas augas superficiais da costa da Coruña (2016). Tania Montes Morado. Grado en Biología-UDC. Coadviser: Marta M. Varela Rozados (IEO-Coruña).</li>
+        <li>El papel de las ondas internas en la mezcla, el suministro de nutrientes y la composición del fitoplancton durante mareas vivas y mareas muertas en la Ría de Vigo (2014). Marina Villamaña Rodríguez. Grado en CC do Mar-UVIGO. Coadviser: Emilio Marañón (UVIGO).</li>
+        <li>El control del suministro de nutrientes en la estructura de las comunidades tropicales y subtropicales de picoplancton autótrofo marino (2013).  Grado en CC do Mar-UVIGO.Tomás Leandro Anllo.</li>
+      </ul>
+
+      <div class="subtitle">Undergraduate mentoring</div>
+      <ul>
+        <li>Maribel García Ibáñez. (2010/2011)</li>
+        <li>Blanca Ausín González. (2009/2010)</li>
       </ul>
 
       <div class="last-updated">
