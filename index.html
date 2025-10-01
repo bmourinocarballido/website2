@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beatriz Mouriño Carballido</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     html, body {
       height: 100%;
@@ -34,25 +36,31 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       padding: 0 24px;
     }
+    .site-name {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #222;
+      text-decoration: none;
+      margin-right: 32px;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
     nav {
-      width: 100%;
       display: flex;
       gap: 2em;
-      justify-content: space-between;
       align-items: center;
     }
     nav a {
       color: #222;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1.6em;
+      font-size: 1.1em;
       padding: 4px 10px;
       border-radius: 3px;
       transition: background 0.16s;
-      flex: 1 1 0;
       text-align: center;
       white-space: nowrap;
     }
@@ -86,14 +94,7 @@
       background: #eee;
       display: block;
     }
-    .name {
-      font-size: 2.2em;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-      text-align: center;
-      color: #222;
-      width: 100%;
-    }
+    /* .name removed, as the name is now in the header */
     .subtitle {
       font-size: 1.25em;
       color: #222;
@@ -134,6 +135,12 @@
     }
     .contact strong {
       font-weight: 600;
+    }
+    .contact i {
+      margin-right: 6px;
+      color: #222; /* negro */
+      width: 18px;
+      text-align: center;
     }
     .links {
       display: flex;
@@ -177,17 +184,20 @@
     @media (max-width: 700px) {
       .center-column {max-width: 98vw;}
       .profile-photo {width: 140px; height: 140px;}
-      .name {font-size: 1.3em;}
+      .site-name {font-size: 1em;}
+      nav a {font-size: 0.97em;}
       .subtitle {font-size: 1em;}
       .about-text {font-size: 0.8em;}
       .contact {font-size: 0.7em;}
       .last-updated {font-size: 0.7em;}
+      .contact i {width: 14px;}
     }
   </style>
 </head>
 <body>
   <header>
     <div class="header-content">
+      <a href="index.html" class="site-name">Beatriz Mouriño Carballido</a>
       <nav>
         <a href="index.html" class="active">Home</a>
         <a href="funding.html">Funding & Publications</a>
@@ -199,17 +209,32 @@
   <main>
     <div class="center-column">
       <img src="img_5441_med.jpeg" alt="Beatriz Mouriño Carballido" class="profile-photo">
-      <div class="name">Beatriz Mouriño Carballido</div>
+      <!-- <div class="name">Beatriz Mouriño Carballido</div> Nombre movido al header -->
       <div class="about-text">
         I am an Associate Professor at the University of Vigo and a member of the 
         <a href="https://gobio.webs.uvigo.es" target="_blank" rel="noopener">Biological Oceanography Group</a>.
-        I lead a multidisciplinary team studying how the ocean works and why it matters, focusing on the two-way interactions between physics and biology—how turbulence and nutrient supply shape microscopic algae, and how biological processes like bioturbulence influence ocean dynamics. These tiny organisms produce as much oxygen as all the world’s forests, absorb carbon dioxide, and help slow climate change. We explore these connections using satellite images, fieldwork, lab experiments, and computer models. If you want to know more about my CV, <a href="BM_CVA.pdf" target="_blank" rel="noopener">click here</a>.
-      </div>
+        I lead a multidisciplinary team that studies how the ocean works and why it matters, focusing on the two-way interactions between physics and biology. We investigate how turbulence and nutrient supply shape microbial growth and community structure, and how these tiny organisms, in turn, regulate the cycling of carbon and nutrients in the ocean. To explore these connections, we combine satellite observations, fieldwork, laboratory experiments, and computer models. My main research interests include primary production, biological nitrogen fixation, the biological carbon pump, plankton ecology and biogeochemistry, and the effects of physical processes—such as upwelling, mixing, and turbulence—on phytoplankton and microbial food webs. I am also passionate about science communication and outreach, and deeply committed to mentoring the next generation of scientists. <a href="BM_CVA.pdf" target="_blank" rel="noopener">Click here to view my CV</a>.
+     </div>
       <div class="contact">
-        <strong>E-mail:</strong> <a href="mailto:bmourino@uvigo.gal">bmourino@uvigo.gal</a><br>
-        <strong>Research Lab at:</strong> Edificio Torre CACTI, Planta 1ª, Laboratorio Oceanografía Biolóxica. Campus de Vigo. Universidade de Vigo, 36310 Vigo, Spain<br>
-        <strong>Phone:</strong> +34-986-818788<br>
-        <strong>Virtual office:</strong> Sala 1718
+        <strong>
+          <i class="fa-solid fa-envelope"></i>E-mail:
+        </strong>
+        <a href="mailto:bmourino@uvigo.gal">bmourino@uvigo.gal</a>
+        <br>
+        <strong>
+          <i class="fa-solid fa-location-dot"></i>Research Lab at:
+        </strong>
+        Edificio Torre CACTI, Planta 1ª, Laboratorio Oceanografía Biolóxica. Campus de Vigo. Universidade de Vigo, 36310 Vigo, Spain
+        <br>
+        <strong>
+          <i class="fa-solid fa-phone"></i>Phone:
+        </strong>
+        +34-986-818788
+        <br>
+        <strong>
+          <i class="fa-solid fa-video"></i>Virtual office:
+        </strong>
+        Sala 1718
       </div>
       <div class="links">
         <a href="https://orcid.org/0000-0001-7961-1477" target="_blank" rel="noopener">
