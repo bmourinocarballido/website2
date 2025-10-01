@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Funding & Publications | Beatriz Mouriño Carballido</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     html, body {
       height: 100%;
@@ -34,25 +36,31 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       padding: 0 24px;
     }
+    .site-name {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #222;
+      text-decoration: none;
+      margin-right: 32px;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
     nav {
-      width: 100%;
       display: flex;
       gap: 2em;
-      justify-content: space-between;
       align-items: center;
     }
     nav a {
       color: #222;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1.6em;
+      font-size: 1.1em;
       padding: 4px 10px;
       border-radius: 3px;
       transition: background 0.16s;
-      flex: 1 1 0;
       text-align: center;
       white-space: nowrap;
     }
@@ -69,37 +77,99 @@
       padding: 32px 10px;
     }
     .center-column {
-      max-width: 900px;
+      max-width: 600px;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    .section-title {
-      font-size: 2em;
-      font-weight: 700;
-      margin-bottom: 1rem;
+    .profile-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: none;
+      box-shadow: 0 0 0 1px #eee;
+      background: #eee;
+      display: block;
+    }
+    /* .name removed, as the name is now in the header */
+    .subtitle {
+      font-size: 1.25em;
+      color: #222;
+      font-weight: 500;
       text-align: center;
-      color: #222;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.01em;
+      line-height: 1.5;
       width: 100%;
     }
-    ul {
-      width: 100%;
-      margin-bottom: 2em;
-      font-size: 1em;
-      color: #222;
-      line-height: 1.6;
-      text-align: left;
-      padding-left: 1.2em;
-    }
-    li {
-      margin-bottom: 0.7em;
-    }
-    a {
+    .subtitle a {
       color: #228be6;
       text-decoration: underline;
       font-weight: 600;
-      word-break: break-all;
+    }
+    .about-text {
+      font-size: 0.97em;
+      color: #222;
+      text-align: justify;
+      margin-bottom: 1.8rem;
+      width: 100%;
+      line-height: 1.6;
+    }
+    .about-text a,
+    .contact a {
+      color: #228be6;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    .contact {
+      font-size: 0.85em;
+      color: #222;
+      text-align: justify;
+      margin-bottom: 2em;
+      line-height: 1.7;
+      width: 100%;
+      word-break: break-word;
+    }
+    .contact strong {
+      font-weight: 600;
+    }
+    .contact i {
+      margin-right: 6px;
+      color: #222; /* negro */
+      width: 18px;
+      text-align: center;
+    }
+    .links {
+      display: flex;
+      gap: 1.2em;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5em;
+      width: 100%;
+    }
+    .links a {
+      color: #222;
+      text-decoration: none;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      gap: 0.35em;
+      transition: text-decoration 0.15s, color 0.15s;
+    }
+    .links a:hover, .links a:focus {
+      text-decoration: underline;
+      color: #228be6;
+    }
+    .links img {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      object-fit: contain;
+      margin-right: 2px;
+      background: none;
     }
     .last-updated {
       font-size: 0.77em;
@@ -113,21 +183,30 @@
     }
     @media (max-width: 700px) {
       .center-column {max-width: 98vw;}
-      .section-title {font-size: 1.3em;}
-      ul {font-size: 0.8em;}
+      .profile-photo {width: 140px; height: 140px;}
+      .site-name {font-size: 1em;}
+      nav a {font-size: 0.97em;}
+      .subtitle {font-size: 1em;}
+      .about-text {font-size: 0.8em;}
+      .contact {font-size: 0.7em;}
       .last-updated {font-size: 0.7em;}
-    }
-    .subtitle {
-      font-size: 1.1em;
-      font-weight: 600;
-      margin-bottom: 0.5em;
-      text-align: left;
-      width: 100%;
-      color: #222;
+      .contact i {width: 14px;}
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="site-name">Beatriz Mouriño Carballido</a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="funding.html">Funding & Publications</a>
+        <a href="outreach.html">Outreach</a>
+        <a href="teaching.html">Teaching & Mentoring</a>
+      </nav>
+    </div>
+  </header>
+  
   <header>
     <div class="header-content">
       <a href="index.html" class="site-name">Beatriz Mouriño Carballido</a>
