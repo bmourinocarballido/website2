@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Outreach | Beatriz Mouriño Carballido</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -27,6 +27,7 @@
       justify-content: center;
       align-items: center;
       height: 60px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
     }
     .header-content {
       width: 100%;
@@ -51,14 +52,19 @@
       font-size: 1.6em;
       padding: 4px 10px;
       border-radius: 3px;
-      transition: background 0.16s;
+      transition: background 0.16s, color 0.16s, text-decoration 0.16s;
       flex: 1 1 0;
       text-align: center;
       white-space: nowrap;
     }
     nav a.active, nav a:hover, nav a:focus {
-      background: #f3f3f3;
+      background: #e9f1fa;
       text-decoration: underline;
+      color: #222 !important; /* Negro para el enlace activo */
+    }
+    nav a.active {
+      font-weight: 900;
+      letter-spacing: 0.02em;
     }
     main {
       margin-top: 80px;
@@ -76,12 +82,27 @@
       align-items: center;
     }
     .section-title {
-      font-size: 2em;
+      font-size: 1.2em;
       font-weight: 700;
-      margin-bottom: 1rem;
-      text-align: center;
+      margin: 2em 0 1rem 0;
+      text-align: left;
       color: #222;
       width: 100%;
+      letter-spacing: 0.01em;
+      background: #f8fafc;
+      padding: 0.2em 0.6em;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(34,139,230,0.05);
+      display: flex;
+      align-items: center;
+      gap: 0.45em;
+    }
+    .section-title svg {
+      width: 1.3em;
+      height: 1.3em;
+      vertical-align: middle;
+      flex-shrink: 0;
+      opacity: 0.85;
     }
     ul {
       width: 100%;
@@ -90,16 +111,48 @@
       color: #222;
       line-height: 1.6;
       text-align: left;
-      padding-left: 1.2em;
+      padding-left: 0;
+      list-style: none;
     }
     li {
       margin-bottom: 0.7em;
+      position: relative;
+      padding-left: 1.5em;
+      display: flex;
+      align-items: center;
+    }
+    li::before {
+      content: "→";
+      color: #228be6;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.1em;
+      line-height: 1.2;
+      transition: color 0.2s;
+    }
+    .link-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.45em;
+      line-height: 0;
+      min-width: 1.2em;
+      min-height: 1.2em;
+      max-width: 1.4em;
+      max-height: 1.4em;
     }
     a {
       color: #228be6;
-      text-decoration: underline;
+      text-decoration: none;
       font-weight: 600;
       word-break: break-all;
+      transition: color 0.16s, text-decoration 0.16s;
+      display: inline-block;
+    }
+    a:hover, a:focus {
+      color: #155fa0;
+      text-decoration: underline;
     }
     .last-updated {
       font-size: 0.77em;
@@ -111,11 +164,29 @@
       width: 100%;
       font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
     }
+    .outreach-image {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 2em;
+      border-radius: 12px;
+      box-shadow: 0 2px 18px rgba(34,139,230,0.07);
+      display: block;
+      object-fit: cover;
+      max-height: 340px;
+      transition: box-shadow 0.2s;
+    }
+    .outreach-image:hover {
+      box-shadow: 0 6px 24px rgba(34,139,230,0.14);
+    }
     @media (max-width: 700px) {
       .center-column {max-width: 98vw;}
-      .section-title {font-size: 1.3em;}
-      ul {font-size: 0.8em;}
+      .section-title {font-size: 1em; padding: 0.15em 0.4em;}
+      ul {font-size: 0.9em;}
       .last-updated {font-size: 0.7em;}
+      nav { gap: 0.7em; }
+      nav a { font-size: 1.1em; padding: 4px 4px; }
+      main {padding: 16px 2vw;}
+      .outreach-image {max-height: 160px;}
     }
     .subtitle {
       font-size: 1.1em;
@@ -125,6 +196,16 @@
       width: 100%;
       color: #222;
     }
+    footer {
+      margin-top: 2em;
+      padding: 1em 0 0.5em 0;
+      width: 100%;
+      font-size: 0.9em;
+      color: #aaa;
+      text-align: center;
+      border-top: 1px solid #eee;
+      background: #f8fafc;
+    }
   </style>
 </head>
 <body>
@@ -132,68 +213,210 @@
     <div class="header-content">
       <nav>
         <a href="index.html">Home</a>
-        <a href="funding.html" class="active">Funding & Publications</a>
-        <a href="outreach.html">Outreach</a>
+        <a href="funding.html">Funding & Publications</a>
+        <a href="outreach.html" class="active">Outreach</a>
         <a href="teaching.html">Teaching & Mentoring</a>
       </nav>
     </div>
   </header>
   <main>
     <div class="center-column">
-      <img src="outreach_foto1.jpeg" alt="Funding/Research Photo" style="width: 100%; max-width: 900px; margin-bottom: 2em; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.07); display: block; margin-left: auto; margin-right: auto;">
-      <div class="section-title">Websites</div>
+      <img src="outreach_foto1.jpeg" alt="Outreach Photo" class="outreach-image" />
+
+      <div class="section-title">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2"/><path stroke-width="2" d="M8 12h8M12 8v8"/></svg>
+        Websites
+      </div>
       <ul>
-        <li><a href="http://proyectoremedios.es/">REMEDIOS Project</a></li>
-        </ul>
-
-       <div class="section-title">Social Media</div>
-       <ul>
-        <li><a href="https://www.facebook.com/REMEDIOSproject">Facebook - REMEDIOS Project</a></li>
-       </ul>
-
-      <div class="section-title">Youtube</div>
-       <ul>
-        <li><a href="https://www.youtube.com/watch?v=XXXXXXXX">REMEDIOS: Capítulo 01</a></li>
-        <li><a href="https://www.youtube.com/watch?v=YYYYYYYY">REMEDIOS: Capítulo 01-Tomas falsas</a></li>
-        <li><a href="https://www.youtube.com/watch?v=ZZZZZZZZ">REMEDIOS: Píldora Fitoplancton</a></li>
-        <li><a href="https://www.youtube.com/watch?v=GAL1">REMEDIOS: Píldora Capas finas de fitoplancton (GAL)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=ESP1">REMEDIOS: Píldora Capas finas de fitoplancton (ESP)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=GAL2">REMEDIOS: Píldora Turbulencia (GAL)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=ESP2">REMEDIOS: Píldora Turbulencia (ESP)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=GAL3">REMEDIOS: Bioturbulencia (GAL)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=ENG1">REMEDIOS: Bioturbulencia (ENG)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=ENG2">REMEDIOS - Influence of Wind Pulses on Phytoplankton in Upwelling Bays (ENG)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=GAL4">REMEDIOS - Implicación das mudanzas no vento na elevada produtividade das Rías Baixas (GAL)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=BIZBEAST">Bizarre Beasts - Anchovies Stir The Ocean By...Doing It</a></li>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#4F86F7"/><path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <a href="http://proyectoremedios.es/">REMEDIOS Project</a>
+        </li>
       </ul>
 
-      <div class="section-title">Radio & Podcast</div>
+      <div class="section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12a9.965 9.965 0 0 0 4.13 8.084c.13.109.27.207.415.292.153.092.315.17.486.233.193.07.397.112.609.127A10.03 10.03 0 0 0 12 22c5.523 0 10-4.477 10-10z" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke-width="2"/></svg>
+        Social Media
+      </div>
       <ul>
-        <li><a href="https://www.gciencia.com/mar-cim/podcast-cim-desvela-por-que-espertar-sexual-bocartes-afecta-correntes-oceanicas/">O CIM desvela por que o espertar sexual dos bocartes afecta as correntes oceánicas</a></li>
-        <li><a href="https://www.npr.org/2022/04/09/1092000745/wait-wait-dont-tell-me-april-9-2022">npr 'Wait Wait' for April 9, 2022: With Not My Job guest Matt Walsh (minute 9:30)</a></li>
+        <li>
+          <span class="link-icon">
+            <!-- Facebook SVG -->
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#1877F3"/><path d="M22 21.5l.5-4h-3v-2c0-1 .3-1.5 1.6-1.5H22V10.6C21.7 10.5 20.8 10.5 20 10.5c-2.4 0-4 1.3-4 3.7v2.3h-3v4h3v7H19v-7h2.5z" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.facebook.com/REMEDIOSproject">Facebook - REMEDIOS Project</a>
+        </li>
       </ul>
 
-      <div class="section-title">TV</div>
+      <div class="section-title">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="6" width="18" height="12" rx="2" stroke-width="2"/><path stroke-width="2" d="M9.5 12l2.5 2 2.5-2"/></svg>
+        Youtube
+      </div>
       <ul>
-        <li><a href="WhatsApp Video 2023-11-03 at 17.12.50.mp4" target="_blank" rel="noopener">Saber y Ganar: ¿Qué fenómeno marino se genera por el frenesí sexual de las anchoas? (03/11/23, minute 14:00-15:30))</a></li>
-        <li><a href="WhatsApp Video 2023-11-09 at 11.59.44.mp4" target="_blank" rel="noopener">La Roca/La Sexta: Una investigación sobre las anchoas, premio Ig Nobel de Física (17/09/23)</a></li>
-
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=XXXXXXXX">REMEDIOS: Capítulo 01</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=YYYYYYYY">REMEDIOS: Capítulo 01-Tomas falsas</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=ZZZZZZZZ">REMEDIOS: Píldora Fitoplancton</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=GAL1">REMEDIOS: Píldora Capas finas de fitoplancton (GAL)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=ESP1">REMEDIOS: Píldora Capas finas de fitoplancton (ESP)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=GAL2">REMEDIOS: Píldora Turbulencia (GAL)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=ESP2">REMEDIOS: Píldora Turbulencia (ESP)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=GAL3">REMEDIOS: Bioturbulencia (GAL)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=ENG1">REMEDIOS: Bioturbulencia (ENG)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=ENG2">REMEDIOS - Influence of Wind Pulses on Phytoplankton in Upwelling Bays (ENG)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=GAL4">REMEDIOS - Implicación das mudanzas no vento na elevada produtividade das Rías Baixas (GAL)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 24 18" fill="none"><rect width="24" height="18" rx="4" fill="#FF0000"/><polygon points="10,6 16,9 10,12" fill="#fff"/></svg>
+          </span>
+          <a href="https://www.youtube.com/watch?v=BIZBEAST">Bizarre Beasts - Anchovies Stir The Ocean By...Doing It</a>
+        </li>
       </ul>
 
-      <div class="section-title">Newspaper</div>
+      <div class="section-title">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="8" width="18" height="8" rx="3" stroke-width="2"/><path stroke-width="2" d="M7 8v-2a5 5 0 0 1 10 0v2"/></svg>
+        Radio & Podcast
+      </div>
       <ul>
-        <li><a href="ng02_24-instinto-anchoas.pdf">National Geographic: Es, más que amor, un auténtico frenesí (24/01/24)</a></li>
-        <li><a href="Silveira.pdf">A Silveira de Kiko da Silva (03/01/24)</a></li>
-        <li><a href="a https://elpais.com/ciencia/2023-09-14/premio-ig-nobel-para-un-estudio-espanol-sobre-la-marejadilla-que-causa-el-frenesi-sexual-de-las-anchoas.html">El Pais: Premio Ig Nobel para un estudio español sobre la marejadilla causada por el frenesí sexual de las anchoas 15/09/23 </a></li>
-        <li><a href="a href="https://doi.org/10.1038/s41567-023-02264-4/">Levity and gravity. Nat. Phys. 19, 1375 (2023)</a></li>
-        <li><a href="20230405011.pdf">Faro de Vigo: La UVigo explica la alta productividad de las rías frente a otras áreas de afloramiento en el mundo (05/06/23)</a></li>
-        <li><a href="https://doi.org/10.1029/2022EO220247/">Eos, 103: Tiny Creatures May Play a Difficult-to-Detect Role in Ocean Mixing(20/05/22)</a></li>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#55C9FF"/><path d="M24 16a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="#fff"/><circle cx="16" cy="16" r="4" fill="#55C9FF"/></svg>
+          </span>
+          <a href="https://www.gciencia.com/mar-cim/podcast-cim-desvela-por-que-espertar-sexual-bocartes-afecta-correntes-oceanicas/">O CIM desvela por que o espertar sexual dos bocartes afecta as correntes oceánicas</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#55C9FF"/><path d="M24 16a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="#fff"/><circle cx="16" cy="16" r="4" fill="#55C9FF"/></svg>
+          </span>
+          <a href="https://www.npr.org/2022/04/09/1092000745/wait-wait-dont-tell-me-april-9-2022">npr 'Wait Wait' for April 9, 2022: With Not My Job guest Matt Walsh (minute 9:30)</a>
+        </li>
+      </ul>
+
+      <div class="section-title">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="4" width="18" height="16" rx="2" stroke-width="2"/><path stroke-width="2" d="M8 10h.01M16 10h.01"/></svg>
+        TV
+      </div>
+      <ul>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#444"/><rect x="7" y="12" width="18" height="8" rx="2" fill="#fff"/><circle cx="16" cy="16" r="2" fill="#444"/></svg>
+          </span>
+          <a href="WhatsApp Video 2023-11-03 at 17.12.50.mp4" target="_blank" rel="noopener">Saber y Ganar: ¿Qué fenómeno marino se genera por el frenesí sexual de las anchoas? (03/11/23, minuto 12:50)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#444"/><rect x="7" y="12" width="18" height="8" rx="2" fill="#fff"/><circle cx="16" cy="16" r="2" fill="#444"/></svg>
+          </span>
+          <a href="WhatsApp Video 2023-11-09 at 11.59.44.mp4" target="_blank" rel="noopener">La Roca/La Sexta: Una investigación sobre las anchoas, premio Ig Nobel de Física (17/09/23)</a>
+        </li>
+      </ul>
+
+      <div class="section-title">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2" stroke-width="2"/><path stroke-width="2" d="M8 8h8v8H8z"/></svg>
+        Newspaper
+      </div>
+      <ul>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+          </span>
+          <a href="ng02_24-instinto-anchoas.pdf">National Geographic: Es, más que amor, un auténtico frenesí (24/01/24)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+          </span>
+          <a href="Silveira.pdf">A Silveira de Kiko da Silva (03/01/24)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+          </span>
+          <a href="https://elpais.com/ciencia/2023-09-14/premio-ig-nobel-para-un-estudio-espanol-sobre-la-marejadilla-que-causa-el-frenesi-sexual-de-las-anchoas.html">El Pais: Premio Ig Nobel para un estudio español sobre la marejadilla que causa el frenesí sexual de las anchoas</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+          </span>
+          <a href="https://doi.org/10.1038/s41567-023-02264-4/">Levity and gravity. Nat. Phys. 19, 1375 (2023)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+          </span>
+          <a href="20230405011.pdf">Faro de Vigo: La UVigo explica la alta productividad de las rías frente a otras áreas de afloramiento en el mundo (05/06/23)</a>
+        </li>
+        <li>
+          <span class="link-icon">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+          </span>
+          <a href="https://doi.org/10.1029/2022EO220247/">Eos, 103: Tiny Creatures May Play a Difficult-to-Detect Role in Ocean Mixing(20/05/22)</a>
+        </li>
       </ul>
 
       <div class="last-updated">
-        Last updated September 2025
+        Última actualización: septiembre 2025
       </div>
     </div>
   </main>
+  <footer>
+    &copy; 2025 Beatriz Mouriño Carballido · Contacto: <a href="mailto:bmourino@uvigo.es">bmourino@uvigo.es</a>
+  </footer>
 </body>
 </html>
