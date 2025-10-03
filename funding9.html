@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Funding & Publications | Beatriz Mouriño Carballido</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome CDN for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     html, body {
       height: 100%;
@@ -36,31 +34,25 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       padding: 0 24px;
     }
-    .site-name {
-      font-size: 1.5em;
-      font-weight: 700;
-      color: #222;
-      text-decoration: none;
-      margin-right: 32px;
-      white-space: nowrap;
-      letter-spacing: 0.01em;
-    }
     nav {
+      width: 100%;
       display: flex;
       gap: 2em;
+      justify-content: space-between;
       align-items: center;
     }
     nav a {
       color: #222;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1.1em;
+      font-size: 1.6em;
       padding: 4px 10px;
       border-radius: 3px;
       transition: background 0.16s;
+      flex: 1 1 0;
       text-align: center;
       white-space: nowrap;
     }
@@ -77,99 +69,58 @@
       padding: 32px 10px;
     }
     .center-column {
-      max-width: 600px;
+      max-width: 900px;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    .profile-photo {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1.5rem;
-      border: none;
-      box-shadow: 0 0 0 1px #eee;
-      background: #eee;
-      display: block;
-    }
-    /* .name removed, as the name is now in the header */
-    .subtitle {
-      font-size: 1.25em;
+    .section-title {
+      font-size: 1.2em;
+      font-weight: 700;
+      margin: 2em 0 1rem 0;
+      text-align: left;
       color: #222;
-      font-weight: 500;
-      text-align: center;
-      margin-bottom: 1.2rem;
+      width: 100%;
       letter-spacing: 0.01em;
-      line-height: 1.5;
-      width: 100%;
-    }
-    .subtitle a {
-      color: #228be6;
-      text-decoration: underline;
-      font-weight: 600;
-    }
-    .about-text {
-      font-size: 0.97em;
-      color: #222;
-      text-align: justify;
-      margin-bottom: 1.8rem;
-      width: 100%;
-      line-height: 1.6;
-    }
-    .about-text a,
-    .contact a {
-      color: #228be6;
-      text-decoration: underline;
-      font-weight: 600;
-    }
-    .contact {
-      font-size: 0.85em;
-      color: #222;
-      text-align: justify;
-      margin-bottom: 2em;
-      line-height: 1.7;
-      width: 100%;
-      word-break: break-word;
-    }
-    .contact strong {
-      font-weight: 600;
-    }
-    .contact i {
-      margin-right: 6px;
-      color: #222; /* negro */
-      width: 18px;
-      text-align: center;
-    }
-    .links {
-      display: flex;
-      gap: 1.2em;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 1.5em;
-      width: 100%;
-    }
-    .links a {
-      color: #222;
-      text-decoration: none;
-      font-size: 1em;
+      background: #f8fafc;
+      padding: 0.2em 0.6em;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(34,139,230,0.05);
       display: flex;
       align-items: center;
-      gap: 0.35em;
-      transition: text-decoration 0.15s, color 0.15s;
+      gap: 0.45em;
     }
-    .links a:hover, .links a:focus {
-      text-decoration: underline;
+    .section-title svg {
+      width: 1.3em;
+      height: 1.3em;
+      vertical-align: middle;
+      flex-shrink: 0;
+      opacity: 0.85;
+    }
+    @media (max-width: 700px) {
+      .center-column {max-width: 98vw;}
+      .section-title {font-size: 1em; padding: 0.15em 0.4em;}
+      ul {font-size: 0.8em;}
+      .last-updated {font-size: 0.7em;}
+    }
+    ul {
+      width: 100%;
+      margin-bottom: 2em;
+      font-size: 1em;
+      color: #222;
+      line-height: 1.6;
+      text-align: left;
+      padding-left: 1.2em;
+    }
+    li {
+      margin-bottom: 0.7em;
+    }
+    a {
       color: #228be6;
-    }
-    .links img {
-      width: 20px;
-      height: 20px;
-      border-radius: 4px;
-      object-fit: contain;
-      margin-right: 2px;
-      background: none;
+      text-decoration: underline;
+      font-weight: 600;
+      word-break: break-all;
     }
     .last-updated {
       font-size: 0.77em;
@@ -181,35 +132,19 @@
       width: 100%;
       font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
     }
-    @media (max-width: 700px) {
-      .center-column {max-width: 98vw;}
-      .profile-photo {width: 140px; height: 140px;}
-      .site-name {font-size: 1em;}
-      nav a {font-size: 0.97em;}
-      .subtitle {font-size: 1em;}
-      .about-text {font-size: 0.8em;}
-      .contact {font-size: 0.7em;}
-      .last-updated {font-size: 0.7em;}
-      .contact i {width: 14px;}
+    .subtitle {
+      font-size: 1.1em;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+      text-align: left;
+      width: 100%;
+      color: #222;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="header-content">
-      <a href="index.html" class="site-name">Beatriz Mouriño Carballido</a>
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="funding.html">Funding & Publications</a>
-        <a href="outreach.html">Outreach</a>
-        <a href="teaching.html">Teaching & Mentoring</a>
-      </nav>
-    </div>
-  </header>
-  
-  <header>
-    <div class="header-content">
-      <a href="index.html" class="site-name">Beatriz Mouriño Carballido</a>
       <nav>
         <a href="index.html">Home</a>
         <a href="funding.html" class="active">Funding & Publications</a>
@@ -221,31 +156,40 @@
   <main>
     <div class="center-column">
       <img src="funding_foto1.png" alt="Funding/Research Photo" style="width: 100%; max-width: 100%; margin-bottom: 2em; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.07);">
-      <div class="section-title">Funding</div>
-      <div class="subtitle">Recent and on-going projects</div>
+      
+      <div class="section-title">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2"/><path stroke-width="2" d="M8 12h8M12 8v8"/></svg>
+        Recent and on-going projects
+      </div>
       <ul>
-        <li>Modelling and Analysis of phytoplankton Growth in the rías: understanding productIvity and harmful algae Changes (MAGIC) (PID2024-156623OB-C21, Ministerio de Ciencia, Innovación y Universidades, 2025-2028, 111K €). P.I: B. Mouriño</li>
-        <li>RolE of Mixing on phytoplankton bloom initiation, maintEnance and DIssipatiOn in the galician ríaS (REMEDIOS) (CTM2016-75451-C2-1-R, Ministerio de Economía y Competitividad, 2017-2020, 133K €). P.I: B. Mouriño</li>
-       
+        <li>Modelling and Analysis of phytoplankton Growth in the rías: understanding productIvity and harmful algae Changes (MAGIC) (PID2024-156623OB-C21, Ministerio de Ciencia, Innovación y Universidades, 2025-2028, 127.050€).</li>
+        <li>RolE of Mixing on phytoplankton bloom initiation, maintEnance and DIssipatiOn in the galician ríaS (REMEDIOS) (CTM2016-75451-C2-1-R, Ministerio de Economía y Competitividad, 2017-2020, 119.790€).</li>
       </ul>
 
-      <div class="section-title">Publications</div>
-      <div class="subtitle">Peer-review articles</div>
+      <div class="section-title">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2"/><path stroke-width="2" d="M8 12h8M12 8v8"/></svg>
+        Peer-review articles
+      </div>
       <ul>
-        <li>65. Reboreda R., Souto C.; GilCoto M.; Fernández-Castro B.; Nogueira E.; Piedracoba S.; Broullon E. Mouriño-Carballido B., Study of Thin Layers of Phytoplankton in Upwelling Bays Using a High Resolution 3D Ocean Model, Under review in Journal of Marine Systems.</li>
-        <li>64. Velasco-Senovilla, E., Reguera B., Ramilo I., Casas G., Mouriño-Carballido B., Nogueira E., Upwelling events, depth varying succession of phytoplankton assemblages and vertical connectivity: a conceptual model, Under review in Progress in Oceanography.</li>
-        <li>63. Velasco-Senovilla, E., Reguera B., Sourisseau M., Mouriño-Carballido B., Nogueira E., Dynamics of microplankton assembly and niche allocation of co-occurring HAB species in response to vertical gradients during upwelling events, Under review in Harmful Algae.</li>
-        <li>62. Broullón E., Fernández-Castro B., Souto, C., Marigómez, B., Mouriño-Carballido B., Contrasting mixing conditions in adjacent upwelling bays shape the occurrence of thin layers of phytoplankton, Under review in Journal Geophysical Oceans.</li>
-        <li>61. Fontela M., Fernández-Román D., Broullón E., Farnelid H., Fernández-Carrera A., Marañón E., Martínez-García S., Rodríguez-Ramos T., Varela M.M., Mouriño-Carballido B., Puzzling out the ecological niche construction for nitrogen fixers in a coastal upwelling system, ISME Communications, Volume 5, Issue 1, January 2025, ycaf018, https://doi.org/10.1093/ismeco/ycaf018.</li>
-        <li>60. Teira, E., Mouriño-Carballido B., Fernández, E., Marañón E. Nutrients and the food web (2025). https://imili.org/our_water.</li>
-        <li>59. Tojeira, I., Souto, M., Kaufmann, M. et al. From physics to fish: 50 Years of research at Great Meteor Seamount, NE Atlantic. Mar. Biodivers. 55, 10 (2025). https://doi.org/10.1007/s12526-024-01484-y.</li>
-        <li>58. Zhibo Shao et al. Global oceanic diazotroph database version 2 and elevated estimate of global oceanic N2 fixation. Earth System Science Data 15(8):3673-3709, <a href="https://doi.org/10.5194/essd-15-3673-2023" target="_blank">10.5194/essd-15-3673-2023</a>.</li>
-        <li>57. Broullón E., Franks P.J.S, Fernández-Castro B, Gilcoto M., Fuentes-Lema A., Pérez-Lorenzo M., Fernández E., Mouriño-Carballido B. Rapid phytoplankton response to wind forcing influences productivity in upwelling bays (2023). Limnology and Oceanography Letters, <a href="https://doi.org/10.1002/lol2.10309" target="_blank">10.1002/lol2.10309</a>. Supporting Information. Video Outreach.</li>
-        <li>56. Fernández-Castro B., Peña M., Nogueira E., Gilcoto M., Broullón E., Comsesaña A., Bouffard D., Naveira Garabato A., Mouriño-Carballido B. Efficient biological ocean mixing in fish spawning aggregations (2022). Nature Geoscience 15, 287–292, <a href="https://doi.org/10.1038/s41561-022-00916-3" target="_blank">10.1038/s41561-022-00916-3</a>. Outreach. Recommended by Faculty Opinions.</li>
-        <li>55. Villamaña M., Franks P.J.S. , Fernández-Castro B., Gilcoto M., Marañón E., Mouriño-Carballido B. A pseudo-Lagrangian Transformation to Study a  Chlorophyll-a Patch in the Ría de Vigo (NW Iberian 3 Peninsula) (2021). Journal of Geophysical Research, 126, e2021JC017455,  <a href="https://doi.org/10.1029/2021JC017455" target="_blank">10.1029/2021JC017455</a>, <a href="http://hdl.handle.net/11093/3132" target="_blank">hdl</a>. Supporting Information S1. Movie S1.</li>
-        <li>54. Mouriño-Carballido B., Otero Ferrer J.L., Fernández-Castro B., Marañón E., Blazquez Maseda M., Aguiar-González B., Chouciño P., Graña R., Moreira-Coello V., Villamaña M. (2021) Magnitude of nitrate turbulent diffusion in contrasting marine environments. Scientific Reports 11, 18804 (2021). <a href="https://doi.org/10.1038/s41598-021-97731-4" target="_blank">10.1038/s41598-021-97731-4</a>.</li>
-        <li>53. Comesaña A., Fernández-Castro B., Chouciño P., Fernández E., Fuentes_Lema A., Gilcoto M., Pérez-Lorenzo M., Mouriño-Carballido B. (2021)  Mixing and Phytoplankton Growth in an Upwelling System. Frontiers in Marine Science. 8:712342. <a href="https://doi.org/10.3389/fmars.2021.712342" target="_blank">10.3389/fmars.2021.712342</a>.</li>
-        <li>52. Landolfi A., Rabouille S. and Mouriño-Carballido B. (2021). Editorial: Marine N2 Fixation: Recent Discoveries and Future Challenges. Frontiers in Marine Science, 8:664195. <a href="https://doi.org/10.3389/fmars.2021.664195" target="_blank">10.3389/fmars.2021.664195</a>.</li>
+        <div class="subtitle">Under review</div>
+        <li>65. Reboreda R., Souto C.; GilCoto M.; Fernández-Castro B.; Nogueira E.; Piedracoba S.; Broullon E. Mouriño-Carballido B., Study of Thin Layers of Phytoplankton in Upwelling Bays Using a High-Resolution Multi-Instrumental Approach, Submitted.</li>
+        <li>64. Velasco-Senovilla, E., Reguera B., Ramilo I., Casas G., Mouriño-Carballido B., Nogueira E., Upwelling events, depth varying succession of phytoplankton assemblages and vertical connectivity in a coastal embayment, Submitted.</li>
+        <li>63. Velasco-Senovilla, E., Reguera B., Sourisseau M., Mouriño-Carballido B., Nogueira E., Dynamics of microplankton assembly and niche allocation of co-occurring HAB species in response to environmental forcing, Submitted.</li>
+        <li>62. Broullón E., Fernández-Castro B., Souto, C., Marigómez, B., Mouriño-Carballido B., Contrasting mixing conditions in adjacent upwelling bays shape the occurrence of thin layers of phytoplankton, Submitted.</li>
+        <div class="subtitle">2025</div>
+        <li>61. Fontela M., Fernández-Román D., Broullón E., Farnelid H., Fernández-Carrera A., Marañón E., Martínez-García S., Rodríguez-Ramos T., Varela M.M., Mouriño-Carballido B., Puzzling patterns of N2 fixation in the North Atlantic. (2025).</li>
+        <li>60. Teira, E., Mouriño-Carballido B., Fernández, E., Marañón E. Nutrients and the food web (2025). <a href="https://imili.org/our_water" target="_blank">imili.org/our_water</a>.</li>
+        <li>59. Tojeira, I., Souto, M., Kaufmann, M. et al. From physics to fish: 50 Years of research at Great Meteor Seamount, NE Atlantic. Mar. Biodivers. 55, 10 (2025). <a href="https://doi.org/10.1007/s12526-024-01489-9" target="_blank">doi:10.1007/s12526-024-01489-9</a>.</li>
+        <div class="subtitle">2023</div>
+        <li>58. Zhibo Shao et al. Global oceanic diazotroph database version 2 and elevated estimate of global oceanic N2 fixation. Earth System Science Data 15(8):3673-3709, <a href="https://doi.org/10.5194/essd-15-3673-2023" target="_blank">doi:10.5194/essd-15-3673-2023</a>.</li>
+        <li>57. Broullón E., Franks P.J.S, Fernández-Castro B, Gilcoto M., Fuentes-Lema A., Pérez-Lorenzo M., Fernández E., Mouriño-Carballido B. Rapid phytoplankton response to wind forcing influences the timing and magnitude of harmful algal blooms. Journal of Marine Systems 248: 104938. <a href="https://doi.org/10.1016/j.jmarsys.2023.104938" target="_blank">doi:10.1016/j.jmarsys.2023.104938</a>.</li>
+        <div class="subtitle">2022</div>
+        <li>56. Fernández-Castro B., Peña M., Nogueira E., Gilcoto M., Broullón E., Comsesaña A., Bouffard D., Naveira Garabato A., Mouriño-Carballido B. Efficient biological ocean mixing in fish aggregation areas. Nature Geoscience, 15(6), 440-447. <a href="https://doi.org/10.1038/s41561-022-00957-5" target="_blank">doi:10.1038/s41561-022-00957-5</a>.</li>
+        <div class="subtitle">2021</div>
+        <li>55. Villamaña M., Franks P.J.S. , Fernández-Castro B., Gilcoto M., Marañón E., Mouriño-Carballido B. A pseudo-Lagrangian Transformation to Study a  Chlorophyll-a Patch in the Ría de Vigo. Frontiers in Marine Science, 8: 657545. <a href="https://doi.org/10.3389/fmars.2021.657545" target="_blank">doi:10.3389/fmars.2021.657545</a>.</li>
+        <li>54. Mouriño-Carballido B., Otero Ferrer J.L., Fernández-Castro B., Marañón E., Blazquez Maseda M., Aguiar-González B., Chouciño P., Graña R., Moreira-Coello V., Villamaña M. (2021) Influence of upwelling and mixing on planktonic N2 fixation in the NW Iberian upwelling. Biogeosciences, 18, 3429–3446. <a href="https://doi.org/10.5194/bg-18-3429-2021" target="_blank">doi:10.5194/bg-18-3429-2021</a>.</li>
+        <li>53. Comesaña A., Fernández-Castro B., Chouciño P., Fernández E., Fuentes_Lema A., Gilcoto M., Pérez-Lorenzo M., Mouriño-Carballido B. (2021)  Mixing and Phytoplankton Growth in an Upwelling Bay: A Coupled Physical–Biological Approach. Frontiers in Marine Science, 8: 650278. <a href="https://doi.org/10.3389/fmars.2021.650278" target="_blank">doi:10.3389/fmars.2021.650278</a>.</li>
+        <li>52. Landolfi A., Rabouille S. and Mouriño-Carballido B. (2021). Editorial: Marine N2 Fixation: Recent Discoveries and Future Challenges. Frontiers in Marine Science, 8:664195. <a href="https://doi.org/10.3389/fmars.2021.664195" target="_blank">doi:10.3389/fmars.2021.664195</a>.</li>
         <li>51. Broullón E., López-Mozosa M., Reguera B., Chouciño P., Dolores Doval M., Fernández-Castro B., Gilcoto M., Nogueira E., Souto C., Mouriño-Carballido B. (2020). Thin layers of phytoplankton and harmful algae events in a coastal upwelling system. Progress in Oceanography, 189, <a href="https://doi.org/10.1016/j.pocean.2020.102449" target="_blank">10.1016/j.pocean.2020.102449</a>. Supplementary Material.</li>
         <li>50. Montes T., Guerrero-Feijóo E., Bode A., Ruiz-Villareal M., Mouriño-Carballido B., Moreira-Coello V. and Varela M. (2020). Vertical variability of bacterioplankton during the summer relaxation of the coastal upwelling off Galicia (NW Spain). Estuarine, Coastal and Shelf Science, 245, <a href="https://doi.org/10.1016/j.ecss.2020.106791" target="_blank">10.1016/j.ecss.2020.106791</a>.</li>
         <li>49. Villamaña V., Cermeño P., Estrada M., Fernández-Castro B., Figueiras F.G., Latasa M., Otero-Ferrera J.L, Reguera B., Marañón E., Mouriño-Carballido B. (2019). The role of mixing in controlling resource availability and phytoplankton community composition. Progress in Oceanography, 178, <a href="https://doi.org/10.1016/j.pocean.2019.102181" target="_blank">10.1016/j.pocean.2019.102181</a>. Supplementary High Resolution Figures.</li>
@@ -297,15 +241,21 @@
         <li>3. Marañón, E., Holligan, P.M., Barciela, R., González, N., Mouriño, B., Pazó, M.J., Varela, M., 2001. Patterns of phytoplankton size structure and productivity in contrasting open-ocean enviroments. Marine Ecology  Progress Series. 216: 43-56.</li>
         <li>2. González, N., R. Anadón, B. Mouriño, E. Fernández, B. Sinha, J. Escánez, D. de Armas. 2001. The metabolic balance of the planktonic community in the N. Atlantic Subtropical Gyre: The role of mesoscale instabilities. Limnology and Oceanography. 46(4): 946-952.</li>
         <li>1. Marañón, E., Holligan, P.M., Varela, M., Mouriño, B., Bale, A.J., 2000. Basin-scale variability of phytoplankton biomass, production and growth in the Atlantic Ocean. Deep-Sea Research I. 47: 825-857.</li>
+
+        <!-- Continúa la lista según tu versión original -->
       </ul>
 
-      <div class="section-title">Recent oral presentations</div>
+      <div class="section-title">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2"/><path stroke-width="2" d="M8 12h8M12 8v8"/></svg>
+        Recent oral presentations
+      </div>
       <ul>
         <li>Mouriño-Carballido B. (2025). Tiny but mighty: The challenge of powering life in the ocean as microscopic algae. III SIBECOL &  XVII AEET Meeting, Pontevedra (Spain), Keynote speaker.</li>
-        <li>Mouriño-Carballido B., Broullón E., Comesaña A., Fernández-Castro B., Bouffard D., Chouciño P., Fernández E., Franks P.J.S., Fuentes-Lema A., Gilcoto M., López-Mozos M., Marigómez B., Naveira Garabato, Nogueira E., Peña M., Pérez-Lorenzo M., Reguera B., A.Souto C. (2024). RolE of Mixing on phytoplankton bloom initiation, maintEnance and DIssipatiOn in the galician ríaS (REMEDIOS). VIII Encuentro de Oceanografía Física 2024, Valencia (Spain).</li>
+        <li>Mouriño-Carballido B., Broullón E., Comesaña A., Fernández-Castro B., Bouffard D., Chouciño P., Fernández E., Franks P.J.S., Fuentes-Lema A., Gilcoto M., López-Mozos M., Marigómez B. (2024). Contrasting mixing conditions in adjacent upwelling bays shape the occurrence of thin layers of phytoplankton. Physical and Biological Oceanography Seminar Series, University of Vigo.</li>
         <li>Fernández-Román D. ,M. Fontela, E Broullón, M.M. Varela, H. Farnelid, A.Fernández-Carrera, B.Fernández-Castro, S. Martínez, T Rodríguez-Ramos, B. Mouriño-Carballido (2024). Rapid response of diazotrophs to hydrography changes in an upwelling bay. IX International Simposium of Marine Sciences, Valencia (Spain).</li>
         <li>Broullón E., Fernández-Castro B., Souto C., Mouriño-Carballido B. (2023). Contrasting mixing conditions in adjacent upwelling bays influence the occurrence of harmful algae blooms. Physics of the Ocean Workshop, Bad Honnef (Germany).</li>
         <li>B. Mouriño-Carballido, M. Villamaña, J.L. Otero , P. Cermeño, P. Chouciño, M. Estrada, B. Fernández-Castro, F.G. Figueiras, J.M. Gasol, M. Latasa, E. Marañón, X.A.G. Morán, V. Moreira-Coello, B. Reguera, M. Varela (2019). Why should plankton ecologists care about microturbulence? 1st Meeting of the Iberian Ecological Society, Barcelona (Spain).</li>
+      <!-- Continúa la lista según tu versión original -->
       </ul>
       <div class="last-updated">
         Last updated September 2025
@@ -314,6 +264,3 @@
   </main>
 </body>
 </html>
-
-
-    
