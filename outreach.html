@@ -60,7 +60,7 @@
     nav a.active, nav a:hover, nav a:focus {
       background: #e9f1fa;
       text-decoration: underline;
-      color: #222 !important; /* Negro para el enlace activo */
+      color: #222 !important;
     }
     nav a.active {
       font-weight: 900;
@@ -98,11 +98,7 @@
       gap: 0.45em;
     }
     .section-title svg {
-      width: 1.3em;
-      height: 1.3em;
-      vertical-align: middle;
-      flex-shrink: 0;
-      opacity: 0.85;
+      display: none;
     }
     ul {
       width: 100%;
@@ -117,20 +113,13 @@
     li {
       margin-bottom: 0.7em;
       position: relative;
-      padding-left: 1.5em;
+      padding-left: 0;
       display: flex;
       align-items: center;
     }
+    /* Remove arrow and restore icon style */
     li::before {
-      content: "→";
-      color: #228be6;
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-size: 1.1em;
-      line-height: 1.2;
-      transition: color 0.2s;
+      display: none;
     }
     .link-icon {
       display: inline-block;
@@ -141,6 +130,7 @@
       min-height: 1.2em;
       max-width: 1.4em;
       max-height: 1.4em;
+      flex-shrink: 0;
     }
     a {
       color: #228be6;
@@ -224,7 +214,6 @@
       <img src="outreach_foto1.jpeg" alt="Outreach Photo" class="outreach-image" />
 
       <div class="section-title">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2"/><path stroke-width="2" d="M8 12h8M12 8v8"/></svg>
         Websites
       </div>
       <ul>
@@ -237,21 +226,18 @@
       </ul>
 
       <div class="section-title">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12a9.965 9.965 0 0 0 4.13 8.084c.13.109.27.207.415.292.153.092.315.17.486.233.193.07.397.112.609.127A10.03 10.03 0 0 0 12 22c5.523 0 10-4.477 10-10z" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke-width="2"/></svg>
         Social Media
       </div>
       <ul>
         <li>
           <span class="link-icon">
-            <!-- Facebook SVG -->
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#1877F3"/><path d="M22 21.5l.5-4h-3v-2c0-1 .3-1.5 1.6-1.5H22V10.6C21.7 10.5 20.8 10.5 20 10.5c-2.4 0-4 1.3-4 3.7v2.3h-3v4h3v7H19v-7h2.5z" fill="#fff"/></svg>
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#1877F3"/><path d="M22 21.5l.5-4h-3v-2c0-1 .3-1.5 1.6-1.5H22V10.6C21.7 10.5 20.8 10.5 20 10.5c-2 0-3 1-3 3v2H14v4h3v7h4v-7h2.2z" fill="#fff"/></svg>
           </span>
           <a href="https://www.facebook.com/REMEDIOSproject">Facebook - REMEDIOS Project</a>
         </li>
       </ul>
 
       <div class="section-title">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="6" width="18" height="12" rx="2" stroke-width="2"/><path stroke-width="2" d="M9.5 12l2.5 2 2.5-2"/></svg>
         Youtube
       </div>
       <ul>
@@ -330,26 +316,24 @@
       </ul>
 
       <div class="section-title">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="8" width="18" height="8" rx="3" stroke-width="2"/><path stroke-width="2" d="M7 8v-2a5 5 0 0 1 10 0v2"/></svg>
         Radio & Podcast
       </div>
       <ul>
         <li>
           <span class="link-icon">
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#55C9FF"/><path d="M24 16a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="#fff"/><circle cx="16" cy="16" r="4" fill="#55C9FF"/></svg>
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#55C9FF"/><path d="M24 16a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="#fff"/><circle cx="16" cy="16" r="5" fill="#55C9FF"/><circle cx="16" cy="16" r="2" fill="#fff"/></svg>
           </span>
           <a href="https://www.gciencia.com/mar-cim/podcast-cim-desvela-por-que-espertar-sexual-bocartes-afecta-correntes-oceanicas/">O CIM desvela por que o espertar sexual dos bocartes afecta as correntes oceánicas</a>
         </li>
         <li>
           <span class="link-icon">
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#55C9FF"/><path d="M24 16a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="#fff"/><circle cx="16" cy="16" r="4" fill="#55C9FF"/></svg>
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#55C9FF"/><path d="M24 16a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="#fff"/><circle cx="16" cy="16" r="5" fill="#55C9FF"/><circle cx="16" cy="16" r="2" fill="#fff"/></svg>
           </span>
           <a href="https://www.npr.org/2022/04/09/1092000745/wait-wait-dont-tell-me-april-9-2022">npr 'Wait Wait' for April 9, 2022: With Not My Job guest Matt Walsh (minute 9:30)</a>
         </li>
       </ul>
 
       <div class="section-title">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="4" width="18" height="16" rx="2" stroke-width="2"/><path stroke-width="2" d="M8 10h.01M16 10h.01"/></svg>
         TV
       </div>
       <ul>
@@ -357,7 +341,7 @@
           <span class="link-icon">
             <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#444"/><rect x="7" y="12" width="18" height="8" rx="2" fill="#fff"/><circle cx="16" cy="16" r="2" fill="#444"/></svg>
           </span>
-          <a href="WhatsApp Video 2023-11-03 at 17.12.50.mp4" target="_blank" rel="noopener">Saber y Ganar: ¿Qué fenómeno marino se genera por el frenesí sexual de las anchoas? (03/11/23, minuto 12:50)</a>
+          <a href="WhatsApp Video 2023-11-03 at 17.12.50.mp4" target="_blank" rel="noopener">Saber y Ganar: ¿Qué fenómeno marino se genera por el frenesí sexual de las anchoas? (03/11/23, minuto 13)</a>
         </li>
         <li>
           <span class="link-icon">
@@ -368,49 +352,47 @@
       </ul>
 
       <div class="section-title">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="2" stroke-width="2"/><path stroke-width="2" d="M8 8h8v8H8z"/></svg>
         Newspaper
       </div>
       <ul>
         <li>
           <span class="link-icon">
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="13" width="10" height="2" rx="1" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" rx="1" fill="#FFDC5E"/></svg>
           </span>
           <a href="ng02_24-instinto-anchoas.pdf">National Geographic: Es, más que amor, un auténtico frenesí (24/01/24)</a>
         </li>
         <li>
           <span class="link-icon">
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="13" width="10" height="2" rx="1" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" rx="1" fill="#FFDC5E"/></svg>
           </span>
           <a href="Silveira.pdf">A Silveira de Kiko da Silva (03/01/24)</a>
         </li>
         <li>
           <span class="link-icon">
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="13" width="10" height="2" rx="1" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" rx="1" fill="#FFDC5E"/></svg>
           </span>
-          <a href="https://elpais.com/ciencia/2023-09-14/premio-ig-nobel-para-un-estudio-espanol-sobre-la-marejadilla-que-causa-el-frenesi-sexual-de-las-anchoas.html">El Pais: Premio Ig Nobel para un estudio español sobre la marejadilla que causa el frenesí sexual de las anchoas</a>
+          <a href="https://elpais.com/ciencia/2023-09-14/premio-ig-nobel-para-un-estudio-espanol-sobre-la-marejadilla-que-causa-el-frenesi-sexual-de-las-anchoas.html">El Pais: Premio Ig Nobel para un estudio español sobre la marejadilla que causa el frenesí sexual de las anchoas (14/09/23)</a>
         </li>
         <li>
           <span class="link-icon">
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="13" width="10" height="2" rx="1" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" rx="1" fill="#FFDC5E"/></svg>
           </span>
           <a href="https://doi.org/10.1038/s41567-023-02264-4">Levity and gravity. Nat. Phys. 19, 1375 (2023)</a>
         </li>
         <li>
           <span class="link-icon">
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="13" width="10" height="2" rx="1" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" rx="1" fill="#FFDC5E"/></svg>
           </span>
           <a href="20230405011.pdf">Faro de Vigo: La UVigo explica la alta productividad de las rías frente a otras áreas de afloramiento en el mundo (05/06/23)</a>
         </li>
         <li>
           <span class="link-icon">
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="12" width="10" height="2" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" fill="#FFDC5E"/></svg>
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#FFDC5E"/><rect x="9" y="10" width="14" height="12" rx="2" fill="#fff"/><rect x="11" y="13" width="10" height="2" rx="1" fill="#FFDC5E"/><rect x="11" y="16" width="10" height="2" rx="1" fill="#FFDC5E"/></svg>
           </span>
           <a href="https://doi.org/10.1029/2022EO220247">Eos, 103: Tiny Creatures May Play a Difficult-to-Detect Role in Ocean Mixing(20/05/22)</a>
         </li>
       </ul>
 
-  </ul>
       <div class="last-updated">
         Last updated September 2025
       </div>
