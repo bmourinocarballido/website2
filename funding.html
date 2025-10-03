@@ -34,27 +34,34 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       padding: 0 24px;
     }
+    .site-name {
+      font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 1.1em;
+      letter-spacing: 0.03em;
+      color: #222;
+      white-space: nowrap;
+      margin-right: 32px;
+    }
     nav {
-      width: 100%;
       display: flex;
       gap: 2em;
-      justify-content: space-between;
       align-items: center;
     }
     nav a {
       color: #222;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.6em;
-      padding: 4px 10px;
+      font-weight: 700;
+      font-size: 1.07em;
+      padding: 1px 10px;
       border-radius: 3px;
       transition: background 0.16s;
-      flex: 1 1 0;
       text-align: center;
       white-space: nowrap;
+      font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
     }
     nav a.active, nav a:hover, nav a:focus {
       background: #f3f3f3;
@@ -91,18 +98,15 @@
       align-items: center;
       gap: 0.45em;
     }
-    .section-title svg {
-      width: 1.3em;
-      height: 1.3em;
-      vertical-align: middle;
-      flex-shrink: 0;
-      opacity: 0.85;
-    }
+    /* Eliminado el svg de .section-title */
     @media (max-width: 700px) {
       .center-column {max-width: 98vw;}
       .section-title {font-size: 1em; padding: 0.15em 0.4em;}
       ul {font-size: 0.8em;}
       .last-updated {font-size: 0.7em;}
+      .header-content {padding: 0 10px;}
+      .site-name {font-size: 1em;}
+      nav a {font-size: 1em;}
     }
     ul {
       width: 100%;
@@ -145,6 +149,7 @@
 <body>
   <header>
     <div class="header-content">
+      <div class="site-name">Beatriz Mouriño Carballido</div>
       <nav>
         <a href="index.html">Home</a>
         <a href="funding.html" class="active">Funding & Publications</a>
@@ -158,16 +163,14 @@
       <img src="funding_foto1.png" alt="Funding/Research Photo" style="width: 100%; max-width: 100%; margin-bottom: 2em; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.07);">
       
       <div class="section-title">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2"/><path stroke-width="2" d="M8 12h8M12 8v8"/></svg>
         Recent and on-going projects
       </div>
       <ul>
-        <li>Modelling and Analysis of phytoplankton Growth in the rías: understanding productIvity and harmful algae Changes (MAGIC) (PID2024-156623OB-C21, Ministerio de Ciencia, Innovación y Universidades, 2025-2028, 127.050€).</li>
+         <li>Modelling and Analysis of phytoplankton Growth in the rías: understanding productIvity and harmful algae Changes (MAGIC) (PID2024-156623OB-C21, Ministerio de Ciencia, Innovación y Universidades, 2025-2028, 127.050€).</li>
         <li>RolE of Mixing on phytoplankton bloom initiation, maintEnance and DIssipatiOn in the galician ríaS (REMEDIOS) (CTM2016-75451-C2-1-R, Ministerio de Economía y Competitividad, 2017-2020, 119.790€).</li>
-      </ul>
+       </ul>
 
       <div class="section-title">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2"/><path stroke-width="2" d="M8 12h8M12 8v8"/></svg>
         Peer-review articles
       </div>
       <ul>
@@ -241,12 +244,10 @@
         <li>3. Marañón, E., Holligan, P.M., Barciela, R., González, N., Mouriño, B., Pazó, M.J., Varela, M., 2001. Patterns of phytoplankton size structure and productivity in contrasting open-ocean enviroments. Marine Ecology  Progress Series. 216: 43-56.</li>
         <li>2. González, N., R. Anadón, B. Mouriño, E. Fernández, B. Sinha, J. Escánez, D. de Armas. 2001. The metabolic balance of the planktonic community in the N. Atlantic Subtropical Gyre: The role of mesoscale instabilities. Limnology and Oceanography. 46(4): 946-952.</li>
         <li>1. Marañón, E., Holligan, P.M., Varela, M., Mouriño, B., Bale, A.J., 2000. Basin-scale variability of phytoplankton biomass, production and growth in the Atlantic Ocean. Deep-Sea Research I. 47: 825-857.</li>
-
-        <!-- Continúa la lista según tu versión original -->
+  <!-- ... el resto de la lista ... -->
       </ul>
 
       <div class="section-title">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2"/><path stroke-width="2" d="M8 12h8M12 8v8"/></svg>
         Recent oral presentations
       </div>
       <ul>
@@ -255,7 +256,7 @@
         <li>Fernández-Román D. ,M. Fontela, E Broullón, M.M. Varela, H. Farnelid, A.Fernández-Carrera, B.Fernández-Castro, S. Martínez, T Rodríguez-Ramos, B. Mouriño-Carballido (2024). Rapid response of diazotrophs to hydrography changes in an upwelling bay. IX International Simposium of Marine Sciences, Valencia (Spain).</li>
         <li>Broullón E., Fernández-Castro B., Souto C., Mouriño-Carballido B. (2023). Contrasting mixing conditions in adjacent upwelling bays influence the occurrence of harmful algae blooms. Physics of the Ocean Workshop, Bad Honnef (Germany).</li>
         <li>B. Mouriño-Carballido, M. Villamaña, J.L. Otero , P. Cermeño, P. Chouciño, M. Estrada, B. Fernández-Castro, F.G. Figueiras, J.M. Gasol, M. Latasa, E. Marañón, X.A.G. Morán, V. Moreira-Coello, B. Reguera, M. Varela (2019). Why should plankton ecologists care about microturbulence? 1st Meeting of the Iberian Ecological Society, Barcelona (Spain).</li>
-      <!-- Continúa la lista según tu versión original -->
+     <!-- ... el resto de la lista ... -->
       </ul>
       <div class="last-updated">
         Last updated September 2025
@@ -264,3 +265,4 @@
   </main>
 </body>
 </html>
+
