@@ -38,6 +38,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 24px;
+      position: relative;
     }
     .site-name {
       font-size: 1.5em;
@@ -47,11 +48,13 @@
       margin-right: 32px;
       white-space: nowrap;
       letter-spacing: 0.01em;
+      z-index: 12;
     }
     nav {
       display: flex;
       gap: 2em;
       align-items: center;
+      z-index: 11;
     }
     nav a {
       color: #222;
@@ -67,6 +70,88 @@
     nav a.active, nav a:hover, nav a:focus {
       background: #f3f3f3;
       text-decoration: underline;
+    }
+    /* Hamburger menu styles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 20;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      margin: 4px 0;
+      background: #222;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+    /* Responsive styles */
+    @media (max-width: 700px) {
+      .center-column {max-width: 98vw;}
+      .profile-photo {width: 140px; height: 140px;}
+      .site-name {font-size: 1em;}
+      nav a {font-size: 0.97em;}
+      .subtitle {font-size: 1em;}
+      .about-text {font-size: 0.8em;}
+      .contact {font-size: 0.7em;}
+      .last-updated {font-size: 0.7em;}
+      .contact i {width: 14px;}
+      .header-content {
+        padding: 0 10px;
+      }
+      .hamburger {
+        display: flex;
+      }
+      nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        gap: 0;
+        width: 100vw;
+        max-width: 320px;
+        border-bottom: 1px solid #eee;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.07);
+        transform: translateY(-200%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.25s, opacity 0.25s;
+        align-items: flex-start;
+      }
+      nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+      nav a {
+        width: 100%;
+        padding: 16px 18px;
+        border-radius: 0;
+        font-size: 1.07em;
+        border-bottom: 1px solid #f3f3f3;
+        text-align: left;
+      }
+      nav a:last-child {
+        border-bottom: none;
+      }
     }
     main {
       margin-top: 80px;
@@ -94,7 +179,6 @@
       background: #eee;
       display: block;
     }
-    /* .name removed, as the name is now in the header */
     .subtitle {
       font-size: 1.25em;
       color: #222;
@@ -181,24 +265,18 @@
       width: 100%;
       font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
     }
-    @media (max-width: 700px) {
-      .center-column {max-width: 98vw;}
-      .profile-photo {width: 140px; height: 140px;}
-      .site-name {font-size: 1em;}
-      nav a {font-size: 0.97em;}
-      .subtitle {font-size: 1em;}
-      .about-text {font-size: 0.8em;}
-      .contact {font-size: 0.7em;}
-      .last-updated {font-size: 0.7em;}
-      .contact i {width: 14px;}
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="header-content">
       <a href="index.html" class="site-name">Beatriz Mouriño Carballido</a>
-      <nav>
+      <button class="hamburger" aria-label="Abrir menú de navegación" aria-controls="main-nav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="main-nav">
         <a href="index.html" class="active">Home</a>
         <a href="funding.html">Funding & Publications</a>
         <a href="outreach.html">Outreach</a>
@@ -209,12 +287,15 @@
   <main>
     <div class="center-column">
       <img src="img_5441_med.jpeg" alt="Beatriz Mouriño Carballido" class="profile-photo">
-      <!-- <div class="name">Beatriz Mouriño Carballido</div> Nombre movido al header -->
       <div class="about-text">
-        I am an Associate Professor at the University of Vigo and a member of the 
-        <a href="https://gobio.webs.uvigo.es" target="_blank" rel="noopener">Biological Oceanography Group</a>.
-        I lead a multidisciplinary team that studies how the ocean works and why it matters, focusing on the two-way interactions between physics and biology. We investigate how turbulence and nutrient supply shape microbial growth and community structure, and how these tiny organisms, in turn, regulate the cycling of carbon and nutrients in the ocean. To explore these connections, we combine satellite observations, fieldwork, laboratory experiments, and computer models. My main research interests include primary production, biological nitrogen fixation, the biological carbon pump, plankton ecology and biogeochemistry, and the effects of physical processes—such as upwelling, mixing, and turbulence—on phytoplankton and microbial food webs. I am also passionate about science communication and outreach, and deeply committed to mentoring the next generation of scientists. <a href="BM_CVA.pdf" target="_blank" rel="noopener">Click here to view my CV</a>.
-     </div>
+        I am an Associate Professor at the University of Vigo and a member of the <a href="https://gobio.webs.uvigo.es" target="_blank" rel="noopener">Biological Oceanography Group</a>.
+        I lead a multidisciplinary team that studies how the ocean works and why it matters, focusing on the two-way interactions between physics and biology.
+        We investigate how turbulence and nutrient supply shape microbial growth and community structure, and how these tiny organisms, in turn, regulate the cycling of carbon and nutrients in the ocean.
+        To explore these connections, we combine satellite observations, fieldwork, laboratory experiments, and computer models.
+        My main research interests include primary production, biological nitrogen fixation, the biological carbon pump, plankton ecology and biogeochemistry, and the effects of physical processes—such as upwelling, mixing, and turbulence—on phytoplankton and microbial food webs.
+        I am also passionate about science communication and outreach, and deeply committed to mentoring the next generation of scientists.
+        <a href="cv.pdf" target="_blank" rel="noopener">Click here to view my CV.</a>
+      </div>
       <div class="contact">
         <strong>
           <i class="fa-solid fa-envelope"></i>E-mail:
@@ -252,5 +333,42 @@
       </div>
     </div>
   </main>
+  <script>
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.getElementById('main-nav');
+
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('open');
+      nav.classList.toggle('open');
+      // Accessibility: update aria-expanded
+      hamburger.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
+    });
+
+    // Optional: close nav menu when clicking outside (on mobile)
+    document.addEventListener('click', function(event) {
+      if (window.innerWidth <= 700) {
+        if (
+          !nav.contains(event.target) &&
+          !hamburger.contains(event.target) &&
+          nav.classList.contains('open')
+        ) {
+          nav.classList.remove('open');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+    // Optional: close nav menu when a link is clicked (on mobile)
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 700) {
+          nav.classList.remove('open');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
